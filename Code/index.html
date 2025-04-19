@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      justify-content: center;
+      height: 100vh;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    h1 {
+      margin-bottom: 0px;
+      font-size: 3em;
+      color: #007bff;
+    }
+    p {
+      font-size: 1.5em;
+      margin-bottom: 120px;
+      color: #2c93fb; /*maybe make this darker or not? not sure. if you read this then check later.*/
+    }
+    .button-container {
+      gap: 20px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      align-items: center;
+    }
+    .dashboard-button {
+      width: 100%;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      font-size: 1.3em;
+      color: white;
+      background-color: #4d79ff; /* darker i guess*/
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.2s;
+    }
+    .dashboard-button:hover {
+      background-color: #3366cc;
+      transform: translateY(-3px);
+    }
+    .dashboard-button:active {
+      transform: scale(0.97);
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome, Vineel</h1>
+  <p>Choose your app from the dashboard.</p>
+  <div class="button-container">
+    <button class="dashboard-button" onclick="openApp(8080)">Calculator</button>
+    <button class="dashboard-button" onclick="openApp(8081)">Currency Converter</button>
+    <button class="dashboard-button" onclick="openApp(8082)">City Forum</button>
+  </div>
+  <script>
+    function openApp(port) {window.open(`http://localhost:${port}`, '_blank');}
+  </script>
+</body>
+</html>

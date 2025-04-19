@@ -1,0 +1,25 @@
+  Finalizing apps:
+    Rename final app names:
+      Metadata:
+        \pubspec.yaml\'name: calculator'
+        flutter pub add rename: ...
+        dart run rename setAppName --value "Calculator Suiren" --targets windows, android, web: ...
+        Generic:
+          flutter clean
+          flutter pub get
+          flutter build apk --release
+          flutter build web --release
+          flutter build windows --release
+    Update final app version:
+      \pubspec.yaml\'version: 1.0.0+1'
+
+  Generating outputs:
+    Android:
+      terminal VIA: flutter build apk --release
+      IN: build\app\outputs\flutter-apk\
+    Windows:
+      terminal VIA: flutter build windows --release
+      IN: build\windows\x64\runner\Release\
+    Web:
+      terminal VIA: flutter build web --release
+      IN: build\web\

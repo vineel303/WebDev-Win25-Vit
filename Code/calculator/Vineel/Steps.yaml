@@ -1,0 +1,11 @@
+Generic:
+    Create a new project:
+        flutter create --org com.shirayurivineel calculator_suiren
+        cd calculator_suiren
+        code .
+    Shortcuts:
+        Ctrl+Shift+R or Ctrl+. : Popup for 'Extract and More actions'
+
+Specific:
+  Dependencies:
+    flutter pub add math_expressions

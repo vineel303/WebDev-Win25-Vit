@@ -1,0 +1,8 @@
+release:
+    android:
+        aab is final?
+    windows:
+        create msix creator
+    web:
+        check release
+        +++ new file? | create server creator
